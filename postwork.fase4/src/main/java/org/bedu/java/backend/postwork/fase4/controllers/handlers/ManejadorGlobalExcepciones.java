@@ -8,6 +8,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
@@ -20,7 +21,7 @@ import java.util.TreeMap;
 @RestControllerAdvice
 public class ManejadorGlobalExcepciones extends ResponseEntityExceptionHandler {
 
-    @Override
+    @ExceptionHandler(MethodArgumentNotValidException.class)
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
         Map<String, String> errors = new TreeMap<>();
         for (FieldError error : ex.getBindingResult().getFieldErrors()) {
@@ -36,7 +37,7 @@ public class ManejadorGlobalExcepciones extends ResponseEntityExceptionHandler {
                 ex, respuestaError, headers, HttpStatus.BAD_REQUEST, request);
     }
 
-    @Override
+    @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
     protected ResponseEntity<Object> handleHttpRequestMethodNotSupported(HttpRequestMethodNotSupportedException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
 
         Map<String, String> errors = new TreeMap<>();

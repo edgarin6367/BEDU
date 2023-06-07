@@ -1,5 +1,7 @@
 package org.bedu.java.backend.postwork.fase4.model;
 
+import jakarta.validation.constraints.*;
+
 import java.time.LocalDateTime;
 
 public class Visita {
