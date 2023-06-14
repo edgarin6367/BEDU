@@ -1,11 +1,11 @@
 package org.bedu.java.backend.postwork.fase4.mappers;
 
-import org.bedu.java.backend.postwork.fase4.model.Producto;
+import org.bedu.java.backend.postwork.fase4.persistence.entities.Producto;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
 public interface ProductoMapper {
-    Producto productoModelToProductoEntity(Producto productoModel);
+    Producto productoModelToProductoEntity(org.bedu.java.backend.postwork.fase4.model.Producto productoModel);
 
-    Producto productoEntityToProductoModel(Producto producto);
+    org.bedu.java.backend.postwork.fase4.model.Producto productoEntityToProductoModel(Producto producto);
 }

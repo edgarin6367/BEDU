@@ -1,11 +1,15 @@
 package org.bedu.java.backend.postwork.fase4.mappers;
 
-import org.bedu.java.backend.postwork.fase4.model.Cliente;
+import org.bedu.java.backend.postwork.fase4.persistence.entities.Cliente;
 import org.mapstruct.Mapper;
+import org.springframework.stereotype.Component;
+
+
+
 
 @Mapper(componentModel = "spring")
 public interface ClienteMapper {
-    Cliente clienteModelToClienteEntity(Cliente clienteModel);
+    Cliente clienteModelToClienteEntity(org.bedu.java.backend.postwork.fase4.model.Cliente clienteModel);
 
-    Cliente clienteEntityToClienteModel(Cliente cliente);
+    org.bedu.java.backend.postwork.fase4.model.Cliente clienteEntityToClienteModel(Cliente cliente);
 }

@@ -1,11 +1,11 @@
 package org.bedu.java.backend.postwork.fase4.mappers;
 
-import org.bedu.java.backend.postwork.fase4.model.Etapa;
+import org.bedu.java.backend.postwork.fase4.persistence.entities.Etapa;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
 public interface EtapaMapper {
-    Etapa etapaModelToEtapaEntity(Etapa etapaModel);
+    Etapa etapaModelToEtapaEntity(org.bedu.java.backend.postwork.fase4.model.Etapa etapaModel);
 
-    Etapa etapaEntityToEtapaModel(Etapa etapa);
+    org.bedu.java.backend.postwork.fase4.model.Etapa etapaEntityToEtapaModel(Etapa etapa);
 }
