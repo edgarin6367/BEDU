@@ -1,5 +1,6 @@
 package org.bedu.java.backend.postwork.fase4.services;
 
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.bedu.java.backend.postwork.fase4.mappers.ProductoMapper;
 import org.bedu.java.backend.postwork.fase4.model.Producto;
@@ -11,7 +12,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class ProductoService {
     private  ProductoRepository repository;
     private  ProductoMapper mapper;
