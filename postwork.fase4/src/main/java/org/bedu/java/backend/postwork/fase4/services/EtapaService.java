@@ -1,5 +1,6 @@
 package org.bedu.java.backend.postwork.fase4.services;
 
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.bedu.java.backend.postwork.fase4.mappers.EtapaMapper;
 import org.bedu.java.backend.postwork.fase4.model.Etapa;
@@ -11,7 +12,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class EtapaService {
     private  EtapaRepository repository;
     private  EtapaMapper mapper;
