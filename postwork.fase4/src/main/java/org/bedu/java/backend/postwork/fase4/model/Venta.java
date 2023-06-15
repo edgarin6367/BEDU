@@ -1,5 +1,18 @@
 package org.bedu.java.backend.postwork.fase4.model;
 
+import jakarta.validation.constraints.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+@Data
+@Builder
+@RequiredArgsConstructor
+@AllArgsConstructor
 public class Venta {
     @PositiveOrZero(message = "El identificador de la venta no puede ser un número negativo")
     private long ventaId;

@@ -1,8 +1,16 @@
 package org.bedu.java.backend.postwork.fase4.model;
 
-import org.springframework.web.bind.annotation.ExceptionHandler;
+import jakarta.validation.constraints.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
-@ExceptionHandler
+
+@Data
+@AllArgsConstructor
+@Builder
+@RequiredArgsConstructor
 public class Cliente {
     @PositiveOrZero(message = "El identificador no puede ser un número negativo")
     private long id;

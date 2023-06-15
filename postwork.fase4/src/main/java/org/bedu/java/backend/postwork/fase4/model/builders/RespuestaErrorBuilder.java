@@ -13,7 +13,7 @@ import java.util.Map;
 public class RespuestaErrorBuilder {
     private int estatus;
     private String mensaje;
-    private Map<String, String> errores;
+    private Map<String, String> errores = new HashMap<>();
     private String ruta;
 
     public RespuestaErrorBuilder estatus(int estatus) {

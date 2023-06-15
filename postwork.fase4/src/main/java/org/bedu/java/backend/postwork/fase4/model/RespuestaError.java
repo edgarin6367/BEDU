@@ -1,10 +1,20 @@
 package org.bedu.java.backend.postwork.fase4.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import org.bedu.java.backend.postwork.fase4.model.builders.RespuestaErrorBuilder;
 
 import java.time.LocalDateTime;
 import java.util.Map;
 
+
+
+//@Data
+//@Builder
+//@AllArgsConstructor
+//@RequiredArgsConstructor
 public class RespuestaError {
     private final LocalDateTime timestamp = LocalDateTime.now();
     private int estatus;

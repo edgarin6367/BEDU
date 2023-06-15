@@ -1,4 +1,19 @@
 package org.bedu.java.backend.postwork.fase4.model;
+
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.PositiveOrZero;
+import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
+
+
+@Data
+@Builder
+@AllArgsConstructor
+@RequiredArgsConstructor
 public class Etapa {
     @PositiveOrZero(message = "El identificador de la etapa no puede ser un número negativo")
     private long etapaId;
